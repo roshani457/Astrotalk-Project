@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta content="width=device-width, initial-scale=1.0" name=viewport>
+    <title>Demo Project</title>
+    <meta name=description content="This is Demo Project and this is Home Page">
+    <meta content name=keywords>
+    <link href=assets/img/logo.png rel=icon>
+    <link href=assets/img/apple-touch-icon.png rel=apple-touch-icon>
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel=stylesheet>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href=assets/vendor/bootstrap/css/bootstrap.min.css rel=stylesheet>
+    <link href=assets/vendor/bootstrap-icons/bootstrap-icons.css rel=stylesheet>
+    <link href=assets/vendor/boxicons/css/boxicons.min.css rel=stylesheet>
+    <link href=assets/vendor/aos/aos.css rel=stylesheet>
+    <link href=assets/vendor/glightbox/css/glightbox.min.css rel=stylesheet>
+    <link href=assets/vendor/swiper/swiper-bundle.min.css rel=stylesheet>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href=assets/css/modal.css rel=stylesheet>
+    <link href=assets/css/style.css rel=stylesheet>
+    <style>
+        /*--------------------------------------------------------------
+         # Preloader
+         --------------------------------------------------------------*/
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 999999;
+            overflow: hidden;
+            background: #fff;
+            transition: all 0.6s ease-out;
+        }
+
+        #preloader:before {
+            content: "";
+            position: fixed;
+            top: calc(50% - 30px);
+            left: calc(50% - 30px);
+            border: 6px solid #fff;
+            border-color: var(--color-primary) transparent var(--color-primary) transparent;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: animate-preloader 1.5s linear infinite;
+        }
+
+        @keyframes animate-preloader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container-fluid px-md-5 px-3 row d-flex align-items-center mx-lg-auto mx-0">
+            <div class="logo col-lg-1 col-2 d-flex align-items-center justify-content-start px-0">
+                <a href="/"><img src="assets/img/logo.png" alt="logo" style="width: 79px;border-radius: 50%;" /></a>
+            </div>
+
+            <div class="col-lg-11 col-10  d-flex align-items-center justify-content-end px-0">
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                        <li><a class="nav-link scrollto" href="/about-us.html">About Us</a></li>
+                        <li><a class="nav-link scrollto" href="/blog.html">Blog</a></li>
+                        <li><a class="nav-link scrollto " href="/join-us.html">Join Us</a></li>
+
+                    </ul>
+                    <a href="tel:123-456-789"
+                        class="d-flex d-lg-none justify-content-center align-items-center text-decoration-none"><i
+                            class="bi bi-whatsapp"
+                            style="font-size: 33px;color: #000;width: 52px;height: 52px;display: flex;justify-content: center;align-items: center;"></i></a>&nbsp;&nbsp;&nbsp;
+                    <a href="/" data-bs-toggle="modal" data-bs-target="#LoginRegisterModal"
+                        class="d-flex d-lg-none justify-content-center align-items-center text-decoration-none"><i
+                            class="bi bi-person"
+                            style="color: #000;font-size: 33px;text-align: center;box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);border-radius: 5px;outline: none;color: var(--color-primary);border: 0 none;padding: 0;background: var(--color-white);display: flex;width: 52px;height: 52px;justify-content: center;align-items: center;"></i></a>&nbsp;&nbsp;&nbsp;
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <a class="d-none d-lg-flex nav-link scrollto mobileNo" href="tel:123-456-789" style="color: #070707;">
+                    <div><i class="bi bi-whatsapp" style="font-size: 30px;color: #696767;"></i></div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<div>Talk to our experts <br><strong
+                            style="font-weight: 900;color: #696767;">123-456-789</strong></div>
+                </a>
+                <a class="d-none d-lg-flex nav-link scrollto justify-content-center align-items-center" href="/"
+                    data-bs-toggle="modal" data-bs-target="#LoginRegisterModal"
+                    style="color: #fff;background-color: var(--custom-color);border-radius: 40px;color: #fff;padding: 10px 21px;"><i
+                        class="bi bi-person" style="color: #fff;font-size: 20px;"></i>&nbsp;&nbsp;Login /
+                    Register</a>
+            </div>
+
+        </div>
+    </header>
+    <main id="main">
+        <a href="whatsapp:contact=7722863325@s.whatsapp.com&message='I'd like to chat with you'"
+            class="btn-whatsapp-pulse">
+            <i class="bi bi-whatsapp" style="font-size: 30px;"></i>
+        </a>
+        <section style="margin-bottom: 50px;">
+            <div class="container-fluid px-md-5 px-3">
+                <div id="carouselExampleSlidesOnly" class="carousel slide HomeCarousel" data-bs-ride="carousel"
+                    data-bs-touch="true">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active"
+                            style="overflow: hidden;background:  linear-gradient(to right, rgb(224 175 100 / 91%) 40%, rgba(0, 0, 0, 0) 100%) 0 0/100% 100%,url(assets/img/remote-header-bg.png);">
+                            <div class="row" style="height: 100%;">
+                                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h2>
+                                            Uncover Inner Harmony <br> & <br> Reveal Life's True Essence
+                                        </h2>
+                                        <h3 class="pt-2" style="text-align: center;">
+                                            “Ancent Wisdom, Modern Wellbeing”
+                                        </h3>
+                                        <h5 class="pt-2" style="text-align: center;">
+                                            Explore Our Featured Courses
+                                        </h5>
+                                        <a class="btn bg-transparent border border-warning " href="/course.html"
+                                            style="border-radius: 15px;padding: 10px 0px;display: flex;justify-content: center;width: 162px;margin: 0px auto;margin-top: 1.75rem!important;">VIEW
+                                            MORE</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item "
+                            style="overflow: hidden;background: linear-gradient(to right, #0d68fda1 40%, rgb(255 255 255 / 0%) 100%) 0 0/100% 100%,url(assets/img/bg-georgia.png);">
+                            <div class="row" style="height: 100%;">
+                                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h2>
+                                            Unveiling Young Brilliance, <br> Nurturing Tradition:
+                                        </h2>
+                                        <h5 class="pt-2" style="text-align: center;">
+                                            A Journey to Holistic Excellence for Kids !
+                                        </h5>
+                                        <a class="btn bg-transparent border border-warning " href="/course.html"
+                                            style="border-radius: 15px;padding: 10px 0px;display: flex;justify-content: center;width: 162px;margin: 0px auto;margin-top: 1.75rem!important;">VIEW
+                                            MORE</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item "
+                            style="overflow: hidden;background:linear-gradient(to right, rgb(243 220 110 / 90%) 40%, rgba(0, 0, 0, 0) 100%) 0 0/100% 100%,url(assets/img/oklahoma.png);">
+                            <div class="row" style="height: 100%;">
+                                <div class="col-lg-6  d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h2>
+                                            Guided Yoga & medition <br> sessions
+                                        </h2>
+                                        <h3 class="pt-2" style="text-align: center;">
+                                            Immerse yourself in the serenity of <br> ancient practices, fostering
+                                            balance <br> and renewed energy. Join us daily to <br> align mind, body, and
+                                            spirit."
+                                        </h3>
+
+                                        <a class="btn bg-transparent border border-danger " href="/course.html"
+                                            style="border-radius: 15px;padding: 10px 0px;display: flex;justify-content: center;width: 162px;margin: 0px auto;margin-top: 1.75rem!important;">VIEW
+                                            MORE</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="margin-bottom: 50px;">
+            <div class="container-fluid px-md-5 px-3 homeOwl">
+                <div class="row px-2">
+                    <div class="col-6 d-flex justify-content-start align-items-center">
+                        <h2 style="font-weight: 400;">Popular Category</h2>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                        <span class="owl-arrow" id="custom-prev">
+                            <span class="bi bi-arrow-left custom-icon"></span>
+                        </span>&nbsp;&nbsp;
+                        <span class="owl-arrow" id="custom-next">
+                            <span class="bi bi-arrow-right custom-icon"></span>
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <div class="owl-carousel owl-carousel1 owl-theme HomeOwlCarousel">
+                    <div class="item text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <img class="card-img-top" src="assets/img/book_img2.png" alt="img"
+                                style="width:70px;border-radius: 50%;margin: 0px auto;"><br>
+                            <h6 class="title">Html5</h6>
+                        </div>
+                    </div>
+                    <div class="item text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <img class="card-img-top" src="assets/img/book_img2.png" alt="img"
+                                style="width:70px;border-radius: 50%;margin: 0px auto;"><br>
+                            <h6 class="title">Css</h6>
+                        </div>
+                    </div>
+                    <div class="item text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <img class="card-img-top" src="assets/img/book_img2.png" alt="img"
+                                style="width:70px;border-radius: 50%;margin: 0px auto;"><br>
+                            <h6 class="title">Javascript</h6>
+                        </div>
+                    </div>
+                    <div class="item text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <img class="card-img-top" src="assets/img/book_img2.png" alt="img"
+                                style="width:70px;border-radius: 50%;margin: 0px auto;"><br>
+                            <h6 class="title">Php</h6>
+                        </div>
+                    </div>
+                    <div class="item text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <img class="card-img-top" src="assets/img/book_img2.png" alt="img"
+                                style="width:70px;border-radius: 50%;margin: 0px auto;"><br>
+                            <h6 class="title">Mysql</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="third-section d-flex justify-content-center align-items-center text-white">
+            <div class="container-fluid px-md-5 px-3">
+                <h2 class="text-center" style="font-weight: 600;">Uncover Vedic Wisdom In Its Purest Essence</h2>
+            </div>
+        </section>
+        <section style="padding: 40px 0px;background-color: #faf9fe;">
+            <div class="container-fluid px-md-5 px-3">
+                <h2 data-aos="fade-up" style="font-weight: 400;">Featured Courses</h2>
+                <br>
+                <div
+                    class="row row-cols-1 row-cols-md-2 row-cols-lg-4 align-items-center justify-content-lg-start justify-content-center g-4 homeCards ">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-lg-start text-center">
+                            <div style="height: 210px;overflow: hidden;">
+                                <img class="card-img-top" src="assets/img/remote-header-bg.png" alt="Card image cap"
+                                    style="border-radius: 1.5rem 1.5rem 0px 0px;height: 100%;">
+                            </div>
+                            <div class="heart-shape-container" data-bs-toggle="modal"
+                                data-bs-target="#LoginRegisterModal">
+                                <i class="heart-shape" style="color: #fff;background-color: #fff;"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">The Bhagavad Gita</h5>
+                                <a href="/course-details.html" class="text-decoration-none btn bfromLeft"
+                                    style="color: #000;"><b class="h5" style="font-weight: 700;color:#7c2e00;">View
+                                        More</b>&nbsp; &nbsp; <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card mt-md-auto mt-5">
+                            <div style="height: 210px;overflow: hidden;">
+
+                                <img class="card-img-top" src="assets/img/bg-georgia.png" alt="Card image cap"
+                                    style="border-radius: 1.5rem 1.5rem 0px 0px;height: 100%;">
+                            </div>
+                            <div class="heart-shape-container" data-bs-toggle="modal"
+                                data-bs-target="#LoginRegisterModal">
+                                <i class="heart-shape" style="color: #fff;background-color: #fff;"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Exploring the Six Darshanas:</h5>
+                                <a href="/course-details.html" class="text-decoration-none btn bfromLeft"
+                                    style="color: #000;"><b class="h5" style="font-weight: 700;color:#7c2e00;">View
+                                        More</b>&nbsp; &nbsp; <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="padding: 40px 0px;background-color: #ffff;">
+            <div class="container-fluid px-md-5 px-3">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-5 flex-wrap">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="count-box">
+                                    <div>
+                                        <i class="bi bi-emoji-smile"></i>
+                                        <br>
+                                        <div>
+                                            <span data-purecounter-start="0" data-purecounter-end="449"
+                                                data-purecounter-duration="1" class="purecounter"></span>
+                                            <p>Our Community</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="count-box">
+                                    <div>
+                                        <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+                                        <div>
+                                            <span data-purecounter-start="0" data-purecounter-end="40"
+                                                data-purecounter-duration="1" class="purecounter"></span>
+                                            <p>Courses & Sessions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="count-box">
+                                    <div>
+                                        <i class="bi bi-headset" style="color: #15be56;"></i>
+                                        <div>
+                                            <span data-purecounter-start="0" data-purecounter-end="137"
+                                                data-purecounter-duration="1" class="purecounter"></span>
+                                            <p>Learners and Users</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="count-box">
+                                    <div>
+                                        <i class="bi bi-award-fill" style="color: #bb0852;"></i>
+                                        <div>
+                                            <span data-purecounter-start="0" data-purecounter-end="112"
+                                                data-purecounter-duration="1" class="purecounter"></span>
+                                            <p>Certified Users</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-7 px-5 mt-lg-auto mt-3">
+                        <h2 class="text-center">Why Choose Us</h2>
+                        <p>Embark on a transformative journey with personalized, one-on-one online classes exploring the
+                            depth of Vedic texts and holistic practices, crafted for your well being and growth.</p>
+                        <div class="d-flex" data-aos="fade-up">
+                            <div class="col-3 d-flex justify-content-center align-items-center"
+                                style="width: 70px;height: 70px;background-color: rgba(238, 108, 32, 0.06);border-radius: 50%;">
+                                <b><i class="bi bi-emoji-smile" style="color: #ee6c20;font-size: 35px;"></i></b>
+                            </div>&nbsp; &nbsp;
+                            <div class="col-9">
+                                <span style="font-size: 25px;">Personalized Path to Inner Fulfillment </span>
+                                <p> Unveil the profound wisdom of Bhagavad Gita, Upanishads, and Darshan in our
+                                    exclusive virtual odysseys. Engage in meditation, astrology, and Ayurveda guided by
+                                    seasoned experts dedicated to your well-being</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" data-aos="fade-up">
+                            <div class="col-3 d-flex justify-content-center align-items-center"
+                                style="width: 70px;height: 70px;background-color: rgba(43, 71, 216, 0.06);border-radius: 50%;">
+                                <b>
+                                    <i class="bi bi-emoji-smile" style="color: purple;font-size: 35px;"></i>
+                                </b>
+                            </div>&nbsp; &nbsp;
+                            <div class="col-9">
+                                <span style="font-size: 25px;">Your Gateway to Holistic Enlightenment</span>
+                                <p>
+                                    Experience the fusion of ancient teachings with modern life. Our one-on-one
+                                    consultations and comprehensive study of Vedic texts offer insights for mental
+                                    tranquility and a balanced, fulfilling existence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+            style="background-color: #fff;padding: 40px 0px;background: linear-gradient(to left, rgb(255 255 255 / 1) 40%, rgba(0, 0, 0, 0) 100%) 0 0/100% 100%,url(assets/img/missouri-homeimg.png);;height: 500px;background-repeat: no-repeat;background-size: 100% 100%; ">
+            <div class="container-fluid px-md-5 px-3" style="height: 100%;">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                    <div class="offset-md-6  d-flex justify-content-center align-items-center">
+                        <div class="text-center">
+                            <h4 class="text-center mb-0 "><b>GET ALL YOUR QUESTIONS ANSWERED</b></h4>
+                            <h2 class="text-center mb-5 fw-bold">Book a free counselling session</h2>
+                            <a class="btn-white text-decoration-none " href="" data-bs-toggle="modal"
+                                data-bs-target="#BookNowModal"
+                                style="background-color: var(--custom-color);border-radius: 40px;color: #fff;padding:20px 30px;"><b>Book
+                                    for free</b>&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right "
+                                    style="font-size: 20px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade top" tabindex="-1" id="BookNowModal">
+            <div class="modal-dialog BookNowmodal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Free Counselling Session</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 0rem;">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="name"><i class="bi bi-person"></i></span>
+                            <input type="email" class="form-control" placeholder="Enter Your Name"
+                                aria-label="Enter Your Name" aria-describedby="name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="mobile-no."><i class="bi bi-phone"></i></span>
+                            <input type="tel" class="form-control" placeholder="Enter Your Mobile Number"
+                                aria-label="Enter Your Mobile Number" aria-describedby="mobile-no.">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="email"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" placeholder="Enter Your Email-ID"
+                                aria-label="Enter Your Email-ID" aria-describedby="email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="course"><i class="bi bi-book"></i></span>
+                            <input type="email" class="form-control" placeholder="Enter Course Name"
+                                aria-label="Enter Course Name" aria-describedby="course">
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="border-top:none;padding-top: 0rem;">
+                        <button type="submit" data-bs-dismiss="modal" name="submit" class="ml-auto"
+                            style="background-color: var(--custom-color);border-radius: 40px;border: 1px solid var(--custom-color);color: #fff;width: 70%;height: 56px;display: flex;margin: 0px auto;justify-content: center;align-items: center;font-weight: 700;">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section style="padding: 40px 0px;">
+            <div class="container-fluid px-md-5 px-3">
+                <div class="d-flex justify-content-between row">
+                    <div class="col-lg-6"
+                        style="position: relative;background: url(assets/img/study.jpg);background-repeat: no-repeat;background-size: 100% 100%;height: 400px;">
+                        <!-- <img src="assets/img/study.jpg" class="img-fluid" alt="" style="position: relative;"> -->
+                        <button type="button" class="btn video-btn" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-bs-target="#myModal"
+                            style="padding:0px; margin-bottom:0px;line-height:0px;border:0px!important;background-color:transparent!important;">
+                            <div class="wrapper">
+                                <div class="video-main">
+                                    <div class="promo-video">
+                                        <div class="waves-block">
+                                            <div class="waves wave-1"></div>
+                                            <div class="waves wave-2"></div>
+                                            <div class="waves wave-3"></div>
+                                        </div>
+                                    </div>
+                                    <span class="video "><i class="fa fa-play"></i></span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-lg-5">
+                        <h5
+                            style="color: #7152E9;font-weight: 800;font-size: 16px;line-height: 26px;text-transform: uppercase;margin-bottom: 5px;letter-spacing: 0.1em;">
+                            ELEVATE YOUR LIFE WITH VEDIC WISDOM</h5>
+                        <p style="font-size: 40px;">Modern Life Solutions</p>
+                        <p style="margin: 40px 0px ;" data-aos="fade-up">Explore the depth of scientific wisdom in Vedic
+                            texts, articulated in the scientific language of Sanskrit, fostering holistic physical and
+                            mental well-being. Gain insights that transcend time, fostering a balanced life integrating
+                            Life energies</p>
+                        <a data-aos="fade-up" href="blog.html" class="btn text-white"
+                            style="border-radius: 5px;display: inline-block;height: 60px;line-height: 60px;color: #fff;background: #7152E9;padding: 0 30px;font-size: 18px;font-weight: 700;transition: 0.4s;font-family: var(--font-primary);border: 0 none;">Explore
+                            Blog&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right " style="font-size: 20px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade top" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                        </button>
+
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <section style="padding: 40px 0px;height: 700px;">
+            <div class="container-fluid px-5">
+                <div class="d-flex ">
+                    <div class="col-md-6" style="position: relative;">
+                       <img src="assets/img/yoga_img1.jpeg" alt=""  width="100%" height="600px" style="border-radius: 50%;overflow: hidden;">
+                       <div class="innerCircle"></div>
+                       <div class="innerCircleOne"></div>
+                       <div class="innerCircleTwo"></div>
+                    </div>
+                    <div class="col-md-6">
+                       
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer id="footer">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="row d-flex justify-content-md-start px-md-auto px-2">
+                <h2 class="text-center mb-lg-5 " style="color: #7c2e00;font-weight: 300;">Vedic Stream</h2>
+                <div class="col-md-4">
+                    <h4 style="visibility: hidden;">roshani</h4>
+                    <p class="text-justify" style="text-align: justify;">Delve into timeless wisdom at Vedic
+                        Stream.Attain balance,wellness,and insight through
+                        personalized guidance.Connect with our community for a transformative journey. Embrace the
+                        age-old teachings for a modern existence.</p>
+                    <div class="set squared bg-fall fg-rise fg-color mb-lg-auto mb-3">
+                        <a href="https://www.instagram.com" class="social instagram">Instagram</a>
+                        <a href="https://www.facebook.com" class="social facebook">Facebook</a>
+                        <a href="https://www.youtube.com" class="social youtube">Youtube</a>
+                    </div>
+                </div>
+                <div class=" col-md-4 footer-links d-flex justify-content-lg-center justify-content-start">
+                    <div>
+                        <h4 style="color: #7c2e00;font-size: 25px;font-weight: 700;">Useful Links</h4>
+                        <ul style="color: #fff;">
+                            <li><a href="/about-us.html"><i
+                                        class="bi bi-chevron-double-right"></i>&nbsp;&nbsp;&nbsp;About
+                                    us</a>
+                            </li>
+                            <li><a href="/privacy-policy.html"><i
+                                        class="bi bi-chevron-double-right"></i>&nbsp;&nbsp;&nbsp;Privacy Policy</a>
+                            </li>
+                            <li><a href="/refund-policy.html"><i
+                                        class="bi bi-chevron-double-right"></i>&nbsp;&nbsp;&nbsp;Refund Policy</a>
+                            </li>
+                            <li><a href="/terms-and-condition.html"><i
+                                        class="bi bi-chevron-double-right"></i>&nbsp;&nbsp;&nbsp;Terms and Condition</a>
+                            </li>
+                            <li><a href="/customer-support.html"><i
+                                        class="bi bi-chevron-double-right"></i>&nbsp;&nbsp;&nbsp;Customer Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 footer-links  d-flex justify-content-lg-center justify-content-start">
+                    <div>
+                        <h4 style="color: #7c2e00;font-size: 25px;font-weight: 700;">Contact Info</h4>
+                        <div>
+                            <ul>
+                                <li><i class="bi bi-geo-alt"></i>&nbsp;&nbsp;&nbsp;01, Saket , Hoshangabad , 461001
+                                    (M.P)
+                                </li>
+                                <li><a href="tel:123-456-789"><i
+                                            class="bi bi-telephone"></i>&nbsp;&nbsp;&nbsp;123-456-789</a>
+                                </li>
+                                <li><a href="mailto:admin@gmail.com" style="color:black"><i
+                                            class="bi bi-envelope"></i>&nbsp;&nbsp;&nbsp;admin@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class=" text-center mt-3">
+                    Copyright 2023 Vedic Stream All Rights Reserved
+                </div>
+            </div>
+
+
+        </div>
+
+    </footer>
+    <div id="preloader"></div>
+
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src=assets/vendor/aos/aos.js></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src=assets/vendor/bootstrap/js/bootstrap.bundle.min.js></script>
+    <script src=assets/vendor/glightbox/js/glightbox.min.js></script>
+    <script src=assets/vendor/swiper/swiper-bundle.min.js></script>
+    <script src=assets/js/main.js></script>
+    <script>
+        (function () {
+            "use strict";
+
+            var carousels = function () {
+                var owl = $(".owl-carousel1").owlCarousel({
+                    loop: true,
+                    center: true,
+                    margin: 0,
+                    navSpeed: 1000,
+                    slideSpeed: 1000,
+                    responsiveClass: true,
+                    nav: false,
+                    center: true,
+                    to: 1,
+                    touchDrag: true,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true,
+                    dots: false,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false
+                        },
+                        680: {
+                            items: 3,
+                            nav: false,
+                            loop: true
+                        },
+                        1000: {
+                            items: 5,
+                            nav: true
+                        }
+                    }
+                });
+
+                // Click event listeners for custom navigation icons
+                $("#custom-next").on("click", function () {
+                    owl.trigger("next.owl.carousel");
+                });
+
+                $("#custom-prev").on("click", function () {
+                    owl.trigger("prev.owl.carousel");
+                });
+            };
+
+            (function ($) {
+                carousels();
+            })(jQuery);
+        })();
+    </script>
+    <script>
+        $(document).ready(function () {
+            var $videoSrc;
+            $('.video-btn').click(function () {
+                $videoSrc = $(this).data("src");
+            });
+            $('#myModal').on('shown.bs.modal', function (e) {
+                $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+            })
+
+            $('#myModal').on('hide.bs.modal', function (e) {
+                $("#video").attr('src', $videoSrc);
+            })
+        });
+    </script>
+
+</body>
+
+</html>

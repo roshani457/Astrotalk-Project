@@ -1,0 +1,21 @@
+#myModal .modal-dialog {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+
+#myModal .modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+#myModal .btn-close {
+    position: absolute;
+    right: -30px;
+    top: 0;
+}
+#LoginRegisterModal .modal-dialog {
+    max-width: 800px;
+    
+}

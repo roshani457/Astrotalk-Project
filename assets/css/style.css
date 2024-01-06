@@ -1,0 +1,1033 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Inter);
+@import url(header.css);
+
+:root {
+    --custom-color: #ef5c32;
+    /* --custom-color2: #0d6efd; */
+    --custom-color2: #525FE1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+address,
+p,
+pre,
+blockquote,
+menu,
+ol,
+ul,
+table,
+hr {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0 0 30px 0px;
+}
+#main{
+    margin-top: 90px;
+}
+ol li {
+    line-height: 1.63;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+ol,
+ul {
+    padding-left: 1rem;
+}
+
+.btn-whatsapp-pulse {
+    background: #25d366;
+    color: white;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    z-index: 996;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.btn-whatsapp-pulse i {
+    color: #fff;
+    font-size: 34px;
+    animation: beat 2s ease-in-out infinite;
+    text-decoration: none;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+/* .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.back-to-top::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    border: 3px solid rgb(251 199 199 / 60%);
+    border-radius: 50%;
+}
+
+.back-to-top::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    transition: border-width 0.5s ease;
+} */
+/* 
+.back-to-top i {
+    font-size: 20px;
+    color: var(--custom-color);
+    line-height: 0;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+} */
+
+
+.LoginFrom {
+    display: none;
+}
+
+.LoginButtonContent,
+.SignupButtonContent {
+    cursor: pointer;
+}
+
+.SignupButtonContent {
+    display: none;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    list-style: none;
+    top: 102%;
+}
+
+.carousel .carousel-indicators .active button {
+    background: gray;
+}
+
+.carousel .carousel-indicators button {
+    width: 20px;
+    height: 0px;
+    border-radius: 100%;
+    background: #878787;
+    margin: 0 5px;
+    padding: 0;
+}
+
+.HomeCarousel .carousel-item {
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 25px;
+}
+
+.HomeCarousel .carousel-item h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.homeOwl .owl-carousel .item {
+    margin: 0px 10px;
+    background: #EAF8F6;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.homeOwl .owl-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeOwl .owl-arrow {
+    width: 50px;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    transition: 0.3s;
+    color: var(--color-primary);
+    line-height: 50px;
+    text-align: center;
+    color: var(--custom-color2);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.HomeOwlCarousel h6 {
+    font-weight: 700;
+}
+
+.homeOwl .owl-arrow:hover {
+    background-color: #ff9e1e;
+    color: #fff;
+}
+
+.third-section {
+    height: 390px;
+    width: 100%;
+    background-image: url(../img/Thanksgiving-Banner.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.homeCards .card {
+    overflow: hidden;
+    width: 18rem;
+    border-radius: 1.5rem;
+    border: 3px solid rgba(0, 0, 0, .125);
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.homeCards .card-body {
+    height: 125px;
+    padding: 1rem 0.8rem;
+    background-color: #edededc4;
+}
+
+.homeCards .card .card-img-top,
+.CourseCard .card .card-img-top {
+    transition: .3s;
+}
+
+.homeCards .card:hover .card-body {
+    background-color: #fff;
+}
+
+.homeCards .card:hover .card-img-top,
+.CourseCard .card:hover .card-img-top {
+    transform: scale(1.1)
+}
+
+.heart-shape-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(45, 40, 78, 0.2);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heart-shape {
+    display: inline-block;
+    width: 2vh;
+    height: 2vh;
+    transform: rotate(45deg);
+    background-color: currentColor;
+}
+
+.heart-shape:before,
+.heart-shape:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.heart-shape:before {
+    bottom: 0;
+    left: -50%;
+}
+
+.heart-shape:after {
+    top: -50%;
+    right: 0;
+}
+
+.card .card-body .btn {
+    box-sizing: border-box;
+    padding: 3px 0px;
+    /* transition: 0.5s all ease-in; */
+    position: relative;
+    cursor: pointer;
+}
+
+.homeCards .card .card-body .btn:before {
+    position: absolute;
+    bottom: 0;
+    background: var(--custom-color2);
+    height: 2px;
+    display: block;
+    content: "";
+    width: 0;
+    transition: 0.2s all ease-in;
+}
+
+.homeCards .card .card-body .btn:hover:before {
+    width: 100%;
+}
+
+.homeCards .card .card-body .bfromLeft:before {
+    bottom: 0;
+    left: 0;
+}
+
+.count-box {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 285px;
+    justify-content: center;
+}
+
+.count-box i {
+    font-size: 42px;
+    line-height: 0;
+    color: #4154f1;
+
+}
+
+.count-box span {
+    font-size: 41px;
+    display: block;
+    font-weight: 700;
+}
+
+.count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+}
+
+.wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.video-main {
+    position: relative;
+    display: inline-block;
+}
+
+.video {
+    height: 75px;
+    width: 75px;
+    line-height: 72px;
+    text-align: center;
+    border-radius: 100%;
+    background: transparent;
+    color: var(--custom-color);
+    display: inline-block;
+    background: #fff;
+    z-index: 999;
+}
+
+@keyframes waves {
+    0% {
+        -webkit-transform: scale(0.2, 0.2);
+        transform: scale(0.2, 0.2);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+
+    50% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    100% {
+        -webkit-transform: scale(0.9, 0.9);
+        transform: scale(0.9, 0.9);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+.fa-play:before {
+    content: "\f04b";
+}
+
+.waves {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #fff;
+    opacity: 0;
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
+    border-radius: 100%;
+    right: -53px;
+    bottom: -51px;
+    z-index: -1;
+    -webkit-animation: waves 3s ease-in-out infinite;
+    animation: waves 3s ease-in-out infinite;
+}
+
+.wave-1 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.HomeOwlCarouselSlide .item {
+   height: 100px;
+}
+
+.wave-3 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+#footer {
+    background: linear-gradient(to left, #f5ffd3, #fcd586);
+    border-top-left-radius: 200px 200px;
+    border-top-right-radius: 200px 200px;
+
+}
+
+#footer {
+    padding: 40px 0px;
+}
+
+#footer ul li {
+    list-style: none;
+    line-height: 40px;
+}
+
+#footer ul {
+    padding-left: 0rem;
+}
+
+#footer ul li a i {
+    color: #000;
+}
+
+#footer ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+a.social {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999em;
+    visibility: hidden;
+    width: 40px;
+}
+
+a.social:before,
+a.social:after {
+    content: "";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 18px;
+    height: 40px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 0;
+    visibility: visible;
+    width: 40px;
+}
+
+a.social:after {
+    left: 0;
+    position: absolute;
+}
+
+a.facebook:before,
+a.instagram:before,
+a.youtube:before {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+a.facebook:after {
+    content: "\f09a";
+    top: -1px;
+}
+
+a.instagram:after {
+    content: "\f16d";
+    top: -1px;
+}
+
+a.youtube:after {
+    content: "\f167";
+    top: -2px;
+
+}
+
+.squared a.social:before {
+    border-radius: 0;
+}
+
+.fg-rise a:after {
+    transition: all .3s ease-in-out;
+}
+
+.fg-rise a:hover:after {
+    transform: translateY(-8px);
+}
+
+.fg-color a:after,
+.bg-fade a:after {
+    color: #000000cf;
+    transition: all .3s ease-in-out;
+}
+
+.fg-color a:hover.facebook:after {
+    color: #3b5998;
+}
+
+.fg-color a:hover.instagram:after {
+    color: #784cac;
+}
+
+.fg-color a:hover.youtube:after {
+    color: #ff4b39;
+}
+
+.bg-fall a {
+    overflow: visible;
+    perspective: 40px;
+    position: relative;
+}
+
+.bg-fall a:before {
+    transform: rotateX(0deg);
+    transform-origin: center 44px;
+    transform-style: preserve-3d;
+    transition: all .3s ease-in-out;
+}
+
+.bg-fall a:hover:before {
+    transform: rotateX(90deg);
+}
+
+.bg-fall a:hover.facebook:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(59, 89, 152, 0.7));
+}
+
+.bg-fall a:hover.instagram:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(120, 76, 172, 0.7));
+}
+
+.bg-fall a:hover.youtube:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 75, 57, 0.7));
+}
+
+.clients .clients-slider .swiper-slide img {
+    opacity: 1;
+
+}
+
+.aboutImage {
+    position: relative;
+}
+
+.aboutImage::before {
+    content: '';
+    bottom: 72px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    border: 10px solid #d85e2bab;
+    border-radius: 50%;
+    animation: beat 2s ease-in-out infinite;
+}
+
+.innerCircle {
+    position: absolute;
+    top: 0px;
+    background-color: transparent;
+    border: 3px solid red;
+    opacity: .9;
+    border-radius: 38% 62% 64% 36% / 43% 35% 65% 57%;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    animation: spinoffPulse 10s infinite linear;
+    z-index: -1;
+}
+
+.borderCircle {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.borderCircle img {
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
+}
+
+.borderCircle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    border: 3px solid red;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-radius: 50%;
+    transform: rotate(-47deg);
+    transition: transform 1s ease;
+}
+
+.borderCircle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    border: 3px solid rgb(251 199 199 / 60%);
+    border-radius: 50%;
+}
+
+.borderCircleContainer h3 a {
+    color: #000;
+    transition: transform 1s ease;
+}
+
+.borderCircleContainer:hover .borderCircle::before {
+    transform: rotate(47deg);
+}
+
+.borderCircleContainer:hover p {
+    color: #4154f1;
+}
+
+/* .borderCircleContainer:hover img{
+    background-color: #878787;
+} */
+.borderCircleContainer h3 a:hover {
+    color: #4154f1;
+}
+
+.innerCircleOne {
+    position: absolute;
+    top: 0px;
+    background-color: transparent;
+    border: 3px solid red;
+    opacity: .9;
+    border-radius: 41% 59% 40% 60% / 65% 66% 34% 35%;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    animation: spinPulse 10s infinite linear;
+    z-index: -1;
+}
+
+.innerCircleTwo {
+    position: absolute;
+    top: 0px;
+    background-color: transparent;
+    border: 3px solid red;
+    opacity: .9;
+    border-radius: 38% 62% 64% 36% / 43% 35% 65% 57%;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    animation: rotatecircle 10s infinite linear;
+    z-index: -1;
+}
+
+@keyframes spinPulse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes spinoffPulse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotatecircle {
+    0% {
+        transform: rotate(-0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.services-card {
+    padding: 60px 30px;
+    width: 285px;
+}
+
+.blogCard .card,
+.CourseCard .card {
+    background-color: #f5f5f5;
+    transition: .3s;
+}
+
+.blogCard .card:hover,
+.CourseCard .card:hover {
+    background-color: #fff;
+}
+
+.blogCard .card h5 {
+    margin: 2.1875rem 0rem 2.1875rem 0rem;
+    font-weight: 400;
+    font-size: 2.1rem;
+}
+
+.blogCard .card a {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.cool-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cool-link::after,
+.card-detaile-anchor::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0d6efd;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.card-detaile-anchor:hover::after {
+    width: 237px;
+    transition: width .3s;
+}
+
+.join-us-blogs h5 {
+    margin: 25px 0px;
+}
+
+.join-us-blogs a {
+    color: #000;
+}
+
+.Join-Us-form {
+    border: 1px solid #000000;
+    border-radius: 40px;
+    padding: 25px;
+}
+
+.Join-Us-form input,
+.Join-Us-form textarea {
+    border-radius: 10px;
+}
+
+.no-resize {
+    resize: none;
+}
+
+.privacy-Section {
+    padding: 80px 0px;
+}
+
+.course-details .nav-tabs {
+    justify-content: space-between;
+}
+
+.course-details .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: var(--custom-color2);
+    border: none;
+    background: none;
+}
+
+.course-details .nav-link {
+    color: #000;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.3rem;
+    outline: none !important;
+    border: none !important;
+    padding: 1rem 0rem;
+    margin: 0rem 1rem;
+}
+
+.course-details .nav-tabs {
+    border-bottom: none;
+    background: #F5F5F5;
+}
+
+
+.course-details .nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border: none;
+    color: var(--custom-color2);
+}
+
+.course-details .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--custom-color2);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.course-details .nav-link.active::before,
+.course-details .nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.course-details .accordion-button:not(.collapsed) {
+    background: none;
+}
+
+
+.course-details .accordion-item {
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07)
+}
+
+.course-details .accordion-button {
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: none;
+
+}
+
+.course-details .accordion-button:focus {
+    box-shadow: none;
+}
+
+.course-detals-card {
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07)
+}
+
+.course-detals-card .list-group-item {
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    font-weight: 700;
+    padding: 1rem;
+    color: #00000082;
+}
+
+.course-detals-card .list-group .list-group-item:last-child {
+    border-bottom: 0px !important;
+}
+
+.course-detals-card .list-group-item i {
+    color: var(--custom-color2);
+}
+
+.course-detals-card input[type="radio"]+label {
+    cursor: pointer;
+}
+
+.aboutImage img {
+    border-radius: 50%;
+    height: 450px;
+    width: 450px;
+}
+.blogDetails{
+    border-bottom: 1px solid #80808059;
+}
+.blogDetails:last-child{
+    border-bottom:none;
+}
+.blogDetails a{
+    color: #000;
+    transition: 0.3s;
+}
+.blogDetails a:hover{
+    color: var(--custom-color2);
+}
+@media only screen and (min-width: 491px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 991px) {}
+
+@media screen and (min-device-width: 991px) and (max-device-width: 1250px) {
+    .borderCircle {
+        width: 207px;
+        height: 207px;
+    }
+
+    .borderCircle img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .aboutImage::before {
+        bottom: 52px;
+        left: 61px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel-item {
+        height: 500px;
+    }
+
+    .HomeCarousel .carousel-item h2 {
+        font-size: 20px;
+    }
+
+    .aboutImage img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .aboutImage::before {
+        bottom: 10px;
+        left: 0px;
+        width: 36px;
+        height: 40px;
+        border: 7px solid #d85e2bab;
+    }
+
+    .course-details .nav-link {
+        margin: 0.4rem;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 491px) {}
